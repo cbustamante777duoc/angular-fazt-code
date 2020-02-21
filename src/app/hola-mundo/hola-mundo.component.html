@@ -5,11 +5,14 @@
     <app-user *ngFor="let user of users" [nameUser]="user"></app-user>
 
 </ul>
-<!--
 <hr>
-<ul>
-  <li *ngIf="activated"></li>
-  <p>activado</p>
-
-</ul>
--->
+<div class="persona">
+  <p>nombre:{{name}}</p>
+  <p>direcion:{{adress.street}}</p>
+  <p>cuidad:{{adress.city}}</p>
+  <ul>
+    <li *ngFor="let hobby of hobbies">
+      {{hobby}}
+    </li>
+  </ul>
+</div>
