@@ -17,7 +17,7 @@ export class EventosComponent implements OnInit {
 
   addContrie(newContrie) {
     // envio del valor del input
-    console.log(newContrie.value);
+    this.paises.push(newContrie.value);
 
     // evitar que recarge la pagina
     return false;
