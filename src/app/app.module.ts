@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HelloWord } from './primerComponente/primer.component';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
 import { UserComponent } from './user/user.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HelloWord,
     HolaMundoComponent,
-    UserComponent
+    UserComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule

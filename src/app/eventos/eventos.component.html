@@ -1,0 +1,22 @@
+
+<form (submit)="addContrie(newContrie)">
+  <input type="text" #newContrie>
+  <button>
+    send contrie
+  </button>
+</form>
+
+<ul>
+  <li *ngFor="let pais of paises">
+    {{pais}}
+    <button (click)="deleteContries(pais)">
+        X
+    </button>
+
+  </li>
+</ul>
+<!--
+<button (click)="alerting()">
+  click on here
+</button>
+-->
