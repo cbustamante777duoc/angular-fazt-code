@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+// modulo dataBind
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HelloWord } from './primerComponente/primer.component';
@@ -16,7 +18,8 @@ import { EventosComponent } from './eventos/eventos.component';
     EventosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

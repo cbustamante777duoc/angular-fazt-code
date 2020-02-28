@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventosComponent implements OnInit {
   paises: string[] = ['chile', 'argentina', 'bolivia', 'peru'];
+  name:string = 'chloe moretz';
+  age:number = 23;
 
   constructor() { }
 
@@ -18,6 +20,9 @@ export class EventosComponent implements OnInit {
   addContrie(newContrie) {
     // envio del valor del input
     this.paises.push(newContrie.value);
+    // limpia el input
+    newContrie.value = '';
+    newContrie.focus();
 
     // evitar que recarge la pagina
     return false;
