@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-eventos',
@@ -9,8 +10,13 @@ export class EventosComponent implements OnInit {
   paises: string[] = ['chile', 'argentina', 'bolivia', 'peru'];
   name:string = 'chloe moretz';
   age:number = 23;
+  posts = [];
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+    this.dataService.getData().subscribe(data => {
+      this.posts = data;
+    });
+  }
 
   alerting() {
     alert('hola');
@@ -40,6 +46,8 @@ export class EventosComponent implements OnInit {
     }
 
   }
+
+
 
   ngOnInit(): void {
   }

@@ -2,12 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // modulo dataBind
 import { FormsModule } from '@angular/forms';
+// importar para uso de servicios
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HelloWord } from './primerComponente/primer.component';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
 import { UserComponent } from './user/user.component';
 import { EventosComponent } from './eventos/eventos.component';
+import { ServiciosComponent } from './servicios/servicios.component';
+
+// importar servicios
+import { DataService } from './data.service';
+
 
 @NgModule({
   declarations: [
@@ -15,13 +22,15 @@ import { EventosComponent } from './eventos/eventos.component';
     HelloWord,
     HolaMundoComponent,
     UserComponent,
-    EventosComponent
+    EventosComponent,
+    ServiciosComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
